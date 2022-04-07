@@ -1,4 +1,5 @@
 ﻿using DesafioPmenos.Api.DTOs;
+using DesafioPmenos.Infrastructure.Model;
 using DesafioPmenos.Infrastructure.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -42,11 +43,28 @@ namespace DesafioPmenos.Api.Controllers
 
         //}
 
-        //[HttpPost("criar-produto")]
-        //public Task<IActionResult> CreateProduct(ProdutoCreateDTO produto)
-        //{
-        //    return Ok(produto);
-        //}
+        [HttpPost("criar-produto")]
+        public async Task<IActionResult> CreateProduct(ProdutoCreateDTO produto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+                ProdutoModel model = produto.GetModel();
+                var data = await _service.CreateProduct(model);
+
+                if (data > 0)
+                    return Ok(data);
+                else
+                    return BadRequest();
+
+            }
+            catch(Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
 
         //[HttpPut("alterar-produto")]
         //public Task<IActionResult> UpdateProduct(ProdutoUpdateDTO produto)

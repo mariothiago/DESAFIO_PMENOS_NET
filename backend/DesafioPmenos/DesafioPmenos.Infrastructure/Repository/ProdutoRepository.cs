@@ -33,9 +33,13 @@ namespace DesafioPmenos.Infrastructure.Repository
             throw new NotImplementedException();
         }
 
-        public Task<int> CreateProduct(ProdutoEntity produto)
+        public async Task<int> CreateProduct(ProdutoEntity produto)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(
+                _configuration.GetConnectionString("DefaultConnection")))
+            {
+                return await connection.ExecuteAsync(ProdutoScripts.CreateProduct, produto);
+            }
         }
 
         public Task<int> UpdateProduct(ProdutoEntity produto)

@@ -1,4 +1,5 @@
-﻿using DesafioPmenos.Infrastructure.Model;
+﻿using DesafioPmenos.Infrastructure.Entity;
+using DesafioPmenos.Infrastructure.Model;
 using DesafioPmenos.Infrastructure.Repository;
 using DesafioPmenos.Infrastructure.Service.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -34,9 +35,17 @@ namespace DesafioPmenos.Infrastructure.Service
             throw new NotImplementedException();
         }
 
-        public Task<int> CreateProduct(ProdutoModel produto)
+        public async Task<int> CreateProduct(ProdutoModel produto)
         {
-            throw new NotImplementedException();
+            var model = new ProdutoEntity()
+            {
+                DataAlteracao = produto.DataAlteracao,
+                DescricaoProduto = produto.DescricaoProduto,
+                IdProduto = produto.IdProduto,
+                PrecoProduto = produto.PrecoProduto
+            };
+
+            return await _repository.CreateProduct(model);
         }
         public Task<int> UpdateProduct(ProdutoModel produto)
         {
