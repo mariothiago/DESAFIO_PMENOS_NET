@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioPmenos.Api", "DesafioPmenos.Api\DesafioPmenos.Api.csproj", "{DB46BEC6-7883-485C-A138-0204F792A733}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioPmenos.Infrastructure", "DesafioPmenos.Infrastructure\DesafioPmenos.Infrastructure.csproj", "{F84EB71D-DD25-42CD-B2D9-3D0FE5EAC2D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB46BEC6-7883-485C-A138-0204F792A733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB46BEC6-7883-485C-A138-0204F792A733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB46BEC6-7883-485C-A138-0204F792A733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB46BEC6-7883-485C-A138-0204F792A733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84EB71D-DD25-42CD-B2D9-3D0FE5EAC2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84EB71D-DD25-42CD-B2D9-3D0FE5EAC2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84EB71D-DD25-42CD-B2D9-3D0FE5EAC2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F84EB71D-DD25-42CD-B2D9-3D0FE5EAC2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ACA7640-6048-41EC-ACD2-9765B0E4C181}
+	EndGlobalSection
+EndGlobal
