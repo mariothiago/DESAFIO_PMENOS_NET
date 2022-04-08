@@ -21,7 +21,7 @@ namespace DesafioPmenos.Api.Controllers
         }
 
         [HttpGet("obter-pelo-id")]
-        public async Task <IActionResult> GetProductByCode(int id)
+        public async Task <IActionResult> GetProductByCode([FromQuery] int id)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace DesafioPmenos.Api.Controllers
         //}
 
         [HttpPost("criar-produto")]
-        public async Task<IActionResult> CreateProduct(ProdutoCreateDTO produto)
+        public async Task<IActionResult> CreateProduct([FromBody] ProdutoCreateDTO produto)
         {
             try
             {
@@ -66,16 +66,44 @@ namespace DesafioPmenos.Api.Controllers
             }
         }
 
-        //[HttpPut("alterar-produto")]
-        //public Task<IActionResult> UpdateProduct(ProdutoUpdateDTO produto)
-        //{
+        [HttpPut("alterar-produto")]
+        public async Task<IActionResult> UpdateProduct([FromBody] ProdutoUpdateDTO produto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-        //}
+                ProdutoModel model = produto.GetModel();
+                var data = await _service.UpdateProduct(model);
 
-        //[HttpDelete("excluir-produto")]
-        //public Task<IActionResult> DeleteProduct(int id)
-        //{
+                if (data > 0)
+                    return Ok(data);
+                else
+                    return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
 
-        //}
+        [HttpDelete("excluir-produto")]
+        public async Task<IActionResult> DeleteProduct([FromQuery] int id)
+        {
+            try
+            {
+                var data = await _service.DeleteProduct(id);
+
+                if (data > 0)
+                    return Ok(data);
+                else
+                    return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
     }
 }

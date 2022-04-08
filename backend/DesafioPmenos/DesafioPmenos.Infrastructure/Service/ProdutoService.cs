@@ -18,16 +18,20 @@ namespace DesafioPmenos.Infrastructure.Service
         }
         public async Task<ProdutoModel> GetProductByCode(int id)
         {
-            var entity = await _repository.GetProductByCode(id);
-            var model = new ProdutoModel()
+            try
             {
-                DataAlteracao = entity.DataAlteracao,
-                DescricaoProduto = entity.DescricaoProduto,
-                IdProduto = entity.IdProduto,
-                PrecoProduto = entity.PrecoProduto
-            };
+                var entity = await _repository.GetProductByCode(id);
+                var model = new ProdutoModel()
+                {
+                    DataAlteracao = entity.DataAlteracao,
+                    DescricaoProduto = entity.DescricaoProduto,
+                    IdProduto = entity.IdProduto,
+                    PrecoProduto = entity.PrecoProduto
+                };
 
-            return model;
+                return model;
+            }
+            catch(Exception) { throw; }
         }
 
         public Task<IEnumerable<ProdutoModel>> GetProductsByStore(int idLoja)
@@ -37,24 +41,46 @@ namespace DesafioPmenos.Infrastructure.Service
 
         public async Task<int> CreateProduct(ProdutoModel produto)
         {
-            var model = new ProdutoEntity()
+            try
             {
-                DataAlteracao = produto.DataAlteracao,
-                DescricaoProduto = produto.DescricaoProduto,
-                IdProduto = produto.IdProduto,
-                PrecoProduto = produto.PrecoProduto
-            };
+                var model = new ProdutoEntity()
+                {
+                    DataAlteracao = produto.DataAlteracao,
+                    DescricaoProduto = produto.DescricaoProduto,
+                    IdProduto = produto.IdProduto,
+                    PrecoProduto = produto.PrecoProduto
+                };
 
-            return await _repository.CreateProduct(model);
+                return await _repository.CreateProduct(model);
+            }
+            catch (Exception) { throw; }
+            
         }
-        public Task<int> UpdateProduct(ProdutoModel produto)
+        public async Task<int> UpdateProduct(ProdutoModel produto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var model = new ProdutoEntity()
+                {
+                    DataAlteracao = produto.DataAlteracao,
+                    DescricaoProduto = produto.DescricaoProduto,
+                    IdProduto = produto.IdProduto,
+                    PrecoProduto = produto.PrecoProduto
+                };
+
+                return await _repository.UpdateProduct(model);
+            }
+            catch (Exception) { throw; }
         }
 
-        public Task<int> DeleteProduct(int id)
+        public async Task<int> DeleteProduct(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _repository.DeleteProduct(id);
+            }
+            catch (Exception) { throw; }
+            
         }
     }
 }

@@ -12,4 +12,9 @@
     <ProjectReference Include="..\DesafioPmenos.Infrastructure\DesafioPmenos.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\Lojas\" />
+    <Folder Include="DTOs\Produtos\" />
+  </ItemGroup>
+
 </Project>

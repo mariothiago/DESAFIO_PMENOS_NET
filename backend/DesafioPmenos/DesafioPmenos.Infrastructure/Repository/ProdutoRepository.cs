@@ -21,11 +21,16 @@ namespace DesafioPmenos.Infrastructure.Repository
 
         public async Task<ProdutoEntity> GetProductByCode(int id)
         {
-            using (var connection = new SqlConnection(
-                _configuration.GetConnectionString("DefaultConnection")))
+            try
             {
-                return await connection.QueryFirstAsync<ProdutoEntity>(ProdutoScripts.GetProductById, new { Id = id });
+                using (var connection = new SqlConnection(
+                _configuration.GetConnectionString("DefaultConnection")))
+                {
+                    return await connection.QueryFirstAsync<ProdutoEntity>(ProdutoScripts.GetProductById, new { IdProduto = id });
+                }
             }
+            catch (Exception) { throw; }
+            
         }
 
         public Task<IEnumerable<ProdutoEntity>> GetProductsByStore(int idLoja)
@@ -35,20 +40,41 @@ namespace DesafioPmenos.Infrastructure.Repository
 
         public async Task<int> CreateProduct(ProdutoEntity produto)
         {
-            using (var connection = new SqlConnection(
-                _configuration.GetConnectionString("DefaultConnection")))
+            try
             {
-                return await connection.ExecuteAsync(ProdutoScripts.CreateProduct, produto);
+                using (var connection = new SqlConnection(
+                _configuration.GetConnectionString("DefaultConnection")))
+                {
+                    return await connection.ExecuteAsync(ProdutoScripts.CreateProduct, produto);
+                }
             }
+            catch (Exception) { throw; } 
         }
 
-        public Task<int> UpdateProduct(ProdutoEntity produto)
+        public async Task<int> UpdateProduct(ProdutoEntity produto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = new SqlConnection(
+                _configuration.GetConnectionString("DefaultConnection")))
+                {
+                    return await connection.ExecuteAsync(ProdutoScripts.UpdateProduct, produto);
+                }
+            }
+            catch (Exception) { throw; } 
         }
-        public Task<int> DeleteProduct(int id)
+
+        public async Task<int> DeleteProduct(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = new SqlConnection(
+                _configuration.GetConnectionString("DefaultConnection")))
+                {
+                    return await connection.ExecuteAsync(ProdutoScripts.DeleteProduct, new { IdProduto = id });
+                }
+            }
+            catch (Exception) { throw; }
         }
     }
 }
