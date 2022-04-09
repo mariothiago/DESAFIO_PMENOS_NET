@@ -9,7 +9,8 @@ namespace DesafioPmenos.Infrastructure.Repository.Interfaces
 {
     public interface ILojaRepository
     {
-        public Task<IEnumerable<LojaEntity>> GetLojaById(int id);
+        public Task<IEnumerable<LojaEntity>> GetAllLojas();
+        public Task<LojaEntity> GetLojaById(int id);
         public Task<int> CreateLoja(LojaEntity loja);
         public Task<int> UpdateLoja(LojaEntity loja);
         public Task<int> DeleteLoja(int id);

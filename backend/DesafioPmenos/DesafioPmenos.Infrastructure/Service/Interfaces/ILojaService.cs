@@ -9,7 +9,8 @@ namespace DesafioPmenos.Infrastructure.Service.Interfaces
 {
     public interface ILojaService
     {
-        public Task<IEnumerable<LojaModel>> GetLojaById(int id);
+        public Task<IEnumerable<LojaModel>> GetAllLojas();
+        public Task<LojaModel> GetLojaById(int id);
         public Task<int> CreateLoja(LojaModel loja);
         public Task<int> UpdateLoja(LojaModel loja);
         public Task<int> DeleteLoja(int id);
