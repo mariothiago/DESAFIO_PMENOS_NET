@@ -27,7 +27,7 @@ Os requisitos básicos do sistema são:
 - [x] Atualizar lojas
 - [x] Deletar produtos
 - [x] Deletar lojas
-- [x] Buscar produtos por loja
+- [ ] Buscar produtos por loja
 
 ## :gem: Bônus: :gem:
 - [ ] Incluir a entidade/table usuário
