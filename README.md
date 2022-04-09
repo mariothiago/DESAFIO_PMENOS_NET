@@ -8,7 +8,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 ## 🚀 Clonando projeto na sua máquina
 Para clonar o repositório em sua máquina local, abra o git bash na pasta desejada e execute o comando git clone https://github.com/mariothiago/DESAFIO_PMENOS_NET.git
 
-### 🛠 Tecnologias utilizadas
+## 🛠 Tecnologias utilizadas
 - [C# .NET 5.0](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [ASPNET Core](https://dotnet.microsoft.com/en-us/apps/aspnet)
 - Dapper - ORM
