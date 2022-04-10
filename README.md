@@ -33,7 +33,7 @@ Os requisitos básicos do sistema são:
 - [x] Deletar lojas
 - [ ] Buscar produtos por loja
 
-## :gem: Bônus: :gem:
+## :gem: Bônus:
 - [x] Incluir a entidade/tabela cliente
 - [x] Incluir a entidade/tabela desconto
 - [x] Relacionar o desconto ao usuário, sendo este desconto aplicado sobre o preço de
