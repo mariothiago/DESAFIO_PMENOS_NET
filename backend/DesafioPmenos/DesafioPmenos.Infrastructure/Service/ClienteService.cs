@@ -102,7 +102,7 @@ namespace DesafioPmenos.Infrastructure.Service
 
                         var discountedPrice = valor - (percentual * valor);
 
-                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} - OURO é {discountedPrice.ToString("C")}";
                     }
 
                     if (user.IdDesconto == 2) // prata = 15% de desconto
@@ -112,7 +112,7 @@ namespace DesafioPmenos.Infrastructure.Service
 
                         var discountedPrice = valor - (percentual * valor);
 
-                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} - PRATA é {discountedPrice.ToString("C")}";
                     }
 
                     else if (user.IdDesconto == 3) // bronze = 10% de desconto
@@ -122,7 +122,7 @@ namespace DesafioPmenos.Infrastructure.Service
 
                         var discountedPrice = valor - (percentual * valor);
 
-                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} - BRONZE é {discountedPrice.ToString("C")}";
                     }
 
                     else if (user.IdDesconto == 4) // diamante = 25% de desconto
@@ -132,7 +132,7 @@ namespace DesafioPmenos.Infrastructure.Service
 
                         var discountedPrice = valor - (percentual * valor);
 
-                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} - DIAMANTE é {discountedPrice.ToString("C")}";
                     }
 
                     else if (user.IdDesconto == 5) // colaborador = 30% de desconto
@@ -142,7 +142,7 @@ namespace DesafioPmenos.Infrastructure.Service
 
                         var discountedPrice = valor - (percentual * valor);
 
-                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} - COLABORADOR é {discountedPrice.ToString("C")}";
                     }
                 }
 
