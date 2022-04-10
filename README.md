@@ -17,7 +17,7 @@ Para clonar o repositório em sua máquina local, abra o git bash na pasta desej
 
 ## Modelagem de Dados
 Utilizando o modelo entidade-relacionamento, foi produzido o seguinte diagrama no SQL Server:
-![alt text](images/modelo-entidade-relacionamento.png)
+![alt text](images/modelo-entidade-relacionamento2.png)
 
 ## 📝 Sobre o projeto
 Esse projeto tem como objetivo desenvolver um sistema básico de gerenciamento das seguintes informações:
