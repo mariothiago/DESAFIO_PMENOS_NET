@@ -15,7 +15,7 @@ Para clonar o repositório em sua máquina local, abra o git bash na pasta desej
 - Altere o projeto para DesafioPmenos.Api como na imagem abaixo:
 - ![alt image](images/tutorial-execucao-vs-1.png)
 - Execute e a página do swagger irá abrir automaticamente na porta 5001 como na imagem abaixo:
-- 
+- ![alt image](images/swagger-api-desafio-pmenos.jpg)
 ## 🛠 Tecnologias utilizadas
 - [C# .NET 5.0](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [ASPNET Core](https://dotnet.microsoft.com/en-us/apps/aspnet)
