@@ -26,6 +26,7 @@ namespace DesafioPmenos.Api
             services.AddTransient<IProdutoService, ProdutoService>();
             services.AddTransient<ILojaService, LojaService>();
             services.AddTransient<IClienteService, ClienteService>();
+            services.AddTransient<IEstoqueLojaService, EstoqueLojaService>();
 
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("DefaultConnection")));
