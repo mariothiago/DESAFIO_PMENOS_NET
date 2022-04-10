@@ -34,8 +34,8 @@ Os requisitos básicos do sistema são:
 - [ ] Buscar produtos por loja
 
 ## :gem: Bônus: :gem:
-- [ ] Incluir a entidade/table usuário
-- [ ] Incluir a entidade/tabela desconto
-- [ ] Relacionar o desconto ao usuário, sendo este desconto aplicado sobre o preço de
+- [x] Incluir a entidade/table usuário
+- [x] Incluir a entidade/tabela desconto
+- [x] Relacionar o desconto ao usuário, sendo este desconto aplicado sobre o preço de
 um produto ao consultar o item de uma loja informando o ID do cliente
 - [ ] Os usuários poderão ver quais descontos estão disponíveis
