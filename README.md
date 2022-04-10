@@ -15,6 +15,10 @@ Para clonar o repositório em sua máquina local, abra o git bash na pasta desej
 - [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-2019)
 - [Swagger](https://swagger.io/)
 
+## Modelagem de Dados
+Utilizando o modelo entidade-relacionamento, foi produzido o seguinte diagrama no SQL Server:
+![alt text](images/modelo-entidade-relacionamento.png)
+
 ## 📝 Sobre o projeto
 Esse projeto tem como objetivo desenvolver um sistema básico de gerenciamento das seguintes informações:
 Lojas, Produtos, Estoques e Preços.
@@ -29,9 +33,9 @@ Os requisitos básicos do sistema são:
 - [x] Deletar lojas
 - [ ] Buscar produtos por loja
 
-## :gem: Bônus: :gem:
-- [ ] Incluir a entidade/table usuário
-- [ ] Incluir a entidade/tabela desconto
-- [ ] Relacionar o desconto ao usuário, sendo este desconto aplicado sobre o preço de
+## :gem: Bônus:
+- [x] Incluir a entidade/tabela cliente
+- [x] Incluir a entidade/tabela desconto
+- [x] Relacionar o desconto ao usuário, sendo este desconto aplicado sobre o preço de
 um produto ao consultar o item de uma loja informando o ID do cliente
 - [ ] Os usuários poderão ver quais descontos estão disponíveis
