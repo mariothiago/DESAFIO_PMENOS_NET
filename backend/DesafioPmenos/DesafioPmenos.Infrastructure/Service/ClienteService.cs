@@ -15,9 +15,11 @@ namespace DesafioPmenos.Infrastructure.Service
     public class ClienteService : IClienteService
     {
         private ClienteRepository _repository;
+        private ProdutoRepository _produtoRepository;
         public ClienteService(IConfiguration config)
         {
             _repository = new ClienteRepository(config);
+            _produtoRepository = new ProdutoRepository(config);
         }
 
         public async Task<ClienteModel> GetClientById(int id)
@@ -79,6 +81,72 @@ namespace DesafioPmenos.Infrastructure.Service
             try
             {
                 return await _repository.DeleteClient(id);
+            }
+            catch (Exception) { throw; }
+        }
+
+        public async Task<string> GetDiscountedPrice(int idCliente, int idProduto)
+        {
+            try
+            {
+                var result = "";
+                var product = await _produtoRepository.GetProductByCode(idProduto);
+                if(product != null)
+                {
+                    var user = await _repository.GetClientById(idCliente);
+
+                    if(user.IdDesconto == 1) // ouro = 20% de desconto
+                    {
+                        double valor = product.PrecoProduto;
+                        double percentual = 20.0 / 100.0;
+
+                        var discountedPrice = valor - (percentual * valor);
+
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                    }
+
+                    if (user.IdDesconto == 2) // prata = 15% de desconto
+                    {
+                        double valor = product.PrecoProduto;
+                        double percentual = 15.0 / 100.0;
+
+                        var discountedPrice = valor - (percentual * valor);
+
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                    }
+
+                    else if (user.IdDesconto == 3) // bronze = 10% de desconto
+                    {
+                        double valor = product.PrecoProduto;
+                        double percentual = 10.0 / 100.0;
+
+                        var discountedPrice = valor - (percentual * valor);
+
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                    }
+
+                    else if (user.IdDesconto == 4) // diamante = 25% de desconto
+                    {
+                        double valor = product.PrecoProduto;
+                        double percentual = 25.0 / 100.0;
+
+                        var discountedPrice = valor - (percentual * valor);
+
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                    }
+
+                    else if (user.IdDesconto == 5) // colaborador = 30% de desconto
+                    {
+                        double valor = product.PrecoProduto;
+                        double percentual = 30.0 / 100.0;
+
+                        var discountedPrice = valor - (percentual * valor);
+
+                        result = $"Preço do produto {product.DescricaoProduto} para o usuário {user.Nome} com desconto nível {user.IdDesconto} é {discountedPrice.ToString("C")}";
+                    }
+                }
+
+                return result;
             }
             catch (Exception) { throw; }
         }

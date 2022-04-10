@@ -38,6 +38,24 @@ namespace DesafioPmenos.Api.Controllers
             }
         }
 
+        [HttpGet("obter-desconto")]
+        public async Task<IActionResult> GetDiscountedPrice(int idCliente, int idProduto)
+        {
+            try
+            {
+                var data = await _service.GetDiscountedPrice(idCliente, idProduto);
+
+                if (data != null)
+                    return Ok(data);
+                else
+                    return BadRequest();
+            }
+            catch(Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
         [HttpPost("criar")]
         public async Task<IActionResult> CreateClient(CreateClienteDTO cliente)
         {

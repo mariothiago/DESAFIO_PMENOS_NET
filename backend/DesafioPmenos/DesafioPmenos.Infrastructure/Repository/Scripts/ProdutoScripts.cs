@@ -6,13 +6,13 @@
 
         internal static string GetProductById = $@"SELECT ID_PRODUTO AS IdProduto,
                                                             PRODUTO_DESCRICAO AS DescricaoProduto,
-                                                            PRECO AS PrecoProduto,
+                                                            PRECO_PRODUTO AS PrecoProduto,
                                                             XXXX_DH_ALT AS DataAlteracao
                                                     FROM {Table} WHERE ID_PRODUTO = @IdProduto";
 
         internal static string CreateProduct = $@"INSERT INTO {Table} (
 	                                                        PRODUTO_DESCRICAO,
-	                                                        PRECO,
+	                                                        PRECO_PRODUTO,
 	                                                        XXXX_DH_ALT
                                                         ) VALUES (
 	                                                        @DescricaoProduto,
@@ -22,7 +22,7 @@
 
         internal static string UpdateProduct = $@"UPDATE {Table} SET
                                                     PRODUTO_DESCRICAO = @DescricaoProduto,
-                                                    PRECO = @PrecoProduto,
+                                                    PRECO_PRODUTO = @PrecoProduto,
                                                     XXXX_DH_ALT = GETDATE()
                                                     WHERE ID_PRODUTO = @IdProduto";
 

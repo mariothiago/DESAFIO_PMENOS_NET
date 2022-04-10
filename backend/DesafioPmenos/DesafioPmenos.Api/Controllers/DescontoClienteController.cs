@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesafioPmenos.Api.Controllers
 {
-    public class DescontoController : Controller
+    public class DescontoProdutoController : Controller
     {
         public IActionResult Index()
         {
