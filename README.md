@@ -9,9 +9,9 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 Para clonar o repositório em sua máquina local, abra o git bash na pasta desejada e execute o comando git clone https://github.com/mariothiago/DESAFIO_PMENOS_NET.git
 
 ## :arrow_forward: Executando projeto na sua máquina
-* Utilizando o Visual Studio:
+Utilizando o Visual Studio:
 - Após clonar o repositório em sua máquina local, abra a solution DesafioPmenos.sln
-- Na solution, procure a barra de executável do projeto (provavelmente estará setado para IIS Express)
+- Na solution, procure a barra de executável do projeto (provavelmente estará setado para IIS Express com padrão)
 - Altere o projeto para DesafioPmenos.Api como na imagem abaixo:
 - ![alt image](images/tutorial-execucao-vs-1.png)
 
