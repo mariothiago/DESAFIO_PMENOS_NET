@@ -20,7 +20,7 @@ Utilizando o Visual Studio:
 
 ## :triangular_ruler: Arquitetura da API
 A arquitetura da API foi baseada no que é empregada na squad GC. Para melhor compreensão, foi feito diagrama abaixo:
-![alt image](images/architecture-api.jpg)
+- ![alt image](images/architecture-api.jpg)
 
 ## 🛠 Tecnologias utilizadas
 - [C# .NET 5.0](https://docs.microsoft.com/pt-br/dotnet/csharp/)
