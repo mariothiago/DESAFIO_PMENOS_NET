@@ -13,9 +13,10 @@ Para clonar o repositório em sua máquina local, abra o git bash na pasta desej
 - Após clonar o repositório em sua máquina local, abra a solution DesafioPmenos.sln
 - Na solution, procure a barra de executável do projeto (provavelmente estará setado para IIS Express)
 - Altere o projeto para DesafioPmenos.Api como na imagem abaixo:
-![alt image](images/tutorial-execucao-vs-1.png)
+*![alt image](images/tutorial-execucao-vs-1.png)
+
 - Execute e a página do swagger irá abrir automaticamente na porta 5001 como na imagem abaixo:
-![alt image](images/swagger-api-desafio-pmenos.jpg)
+*![alt image](images/swagger-api-desafio-pmenos.jpg)
 
 ## :triangular_ruler: Arquitetura da API
 A arquitetura da API foi baseada no que é empregada na squad GC. Para melhor compreensão, foi feito diagrama abaixo:
