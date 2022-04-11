@@ -8,7 +8,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 ## 🚀 Clonando projeto na sua máquina
 Para clonar o repositório em sua máquina local, abra o git bash na pasta desejada e execute o comando git clone https://github.com/mariothiago/DESAFIO_PMENOS_NET.git
 
-## Executando projeto na sua máquina
+## :arrow_forward: Executando projeto na sua máquina
 * Utilizando o Visual Studio:
 - Após clonar o repositório em sua máquina local, abra a solution DesafioPmenos.sln
 - Na solution, procure a barra de executável do projeto (provavelmente estará setado para IIS Express)
@@ -17,6 +17,10 @@ Para clonar o repositório em sua máquina local, abra o git bash na pasta desej
 - Execute e a página do swagger irá abrir automaticamente na porta 5001 como na imagem abaixo:
 ![alt image](images/swagger-api-desafio-pmenos.jpg)
 
+## :triangular_ruler: Arquitetura da API
+A arquitetura da API foi baseada no que é empregada na squad GC. Para melhor compreensão, foi feito diagrama abaixo:
+![alt image](images/architecture-api.jpg)
+
 ## 🛠 Tecnologias utilizadas
 - [C# .NET 5.0](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [ASPNET Core](https://dotnet.microsoft.com/en-us/apps/aspnet)
@@ -24,7 +28,7 @@ Para clonar o repositório em sua máquina local, abra o git bash na pasta desej
 - [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-2019)
 - [Swagger](https://swagger.io/)
 
-## Modelagem de Dados
+## :game_die: Modelagem de Dados
 Utilizando o modelo entidade-relacionamento, foi produzido o seguinte diagrama no SQL Server:
 ![alt text](images/modelo-entidade-relacionamento2.png)
 
